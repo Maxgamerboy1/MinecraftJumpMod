@@ -1,0 +1,14 @@
+package com.thomas.jumpmod.proxy;
+
+import com.thomas.jumpmod.util.RegisterUtil;
+import net.minecraftforge.fml.common.event.*;
+
+public class CommonProxy {
+    public void preInit(FMLPreInitializationEvent event) {
+        RegisterUtil.registerAll(event);
+    }
+    public void init(FMLInitializationEvent event) { }
+    public void postInit(FMLPostInitializationEvent event) { }
+    public void serverStarting(FMLServerStartingEvent event) { }
+    public void serverStopping(FMLServerStoppingEvent event) { }
+}
