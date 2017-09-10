@@ -19,13 +19,13 @@ public class ServerRegister {
     }
 
     @SubscribeEvent
-    public void registerBlocks(RegistryEvent.Register<Block> event) {
+    public static void registerBlocks(RegistryEvent.Register<Block> event) {
         JumpMod.LOGGER.info("Registering blocks...");
         event.getRegistry().registerAll(Blocks.tutBlock);
     }
 
     @SubscribeEvent
-    public void registerItems(RegistryEvent.Register<Item> event) {
+    public static void registerItems(RegistryEvent.Register<Item> event) {
         JumpMod.LOGGER.info("Registering items...");
         IForgeRegistry<Item> registry = event.getRegistry();
         registry.registerAll(Items.POGOSTICKITEM);

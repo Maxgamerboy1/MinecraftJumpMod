@@ -6,6 +6,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
 import java.util.logging.Logger;
 
@@ -35,5 +36,11 @@ public class JumpMod {
     public void postInit(FMLPostInitializationEvent event) {
         LOGGER.info("Starting post-init...");
         proxy.postInit(event);
+    }
+
+    @Mod.EventHandler
+    public void serverStarting(FMLServerStartingEvent event) {
+        LOGGER.info("Starting server...");
+        proxy.serverStarting(event);
     }
 }
